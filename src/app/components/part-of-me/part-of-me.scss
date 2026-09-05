@@ -1,1 +1,56 @@
-.wrap { max-width: 1100px; margin: 0 auto; padding: 0 28px; }.section { padding-top: 88px; }.kicker { color: var(--accent); font: 13px var(--mono); letter-spacing: 1px; }.section h2 { margin: 8px 0 20px; color: #fff; font: 700 clamp(1.7rem,3.5vw,2.6rem)/1.2 var(--mono); }.tabs { display: flex; gap: 22px; border-bottom: 1px solid var(--line); }.tabs button { padding: 10px 4px; border: 0; border-bottom: 2px solid transparent; background: none; color: var(--muted); cursor: pointer; }.tabs button.active { color: var(--accent); border-color: var(--accent); }.pane { display: none; max-width: 650px; padding: 22px; color: var(--muted); border: 1px solid var(--line); border-top: 0; background: var(--bg-raised); }.pane.active { display: block; }
+// part-of-me.scss
+
+.about-card {
+    background: var(--bg-raised);
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    backdrop-filter: blur(8px);
+    overflow: hidden; // Para que los bordes superiores de los tabs respeten el border-radius
+    margin-top: 24px;
+}
+
+.tabs {
+    display: flex;
+    gap: 8px;
+    padding: 12px 16px 0;
+    border-bottom: 1px solid var(--line);
+    background: rgba(0, 0, 0, 0.2); // Un tono ligeramente más oscuro para la barra
+}
+
+.tabs button {
+    padding: 10px 18px;
+    border: 1px solid transparent;
+    border-bottom: none;
+    border-radius: 6px 6px 0 0;
+    background: transparent;
+    color: var(--muted);
+    font-family: var(--mono);
+    font-size: 14px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: #fff;
+    }
+}
+
+.tabs button.active {
+    color: var(--accent);
+    background: var(--bg-raised);
+    border-color: var(--line);
+    border-bottom: 1px solid var(--bg-raised); // "Conecta" visualmente la pestaña con el panel
+    margin-bottom: -1px; // Pisa la línea divisoria inferior
+}
+
+.pane {
+    display: none;
+    padding: 28px 24px;
+    color: var(--text);
+    font-size: 15px;
+    line-height: 1.6;
+    max-width: 100%; // Ocupa todo el ancho del contenedor
+}
+
+.pane.active {
+    display: block;
+}
