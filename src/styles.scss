@@ -1,0 +1,21 @@
+:root {
+	--bg: #050806;
+	--bg-raised: rgba(12, 22, 17, 0.82);
+	--line: rgba(61, 220, 132, 0.2);
+	--line-glow: rgba(61, 220, 132, 0.45);
+	--text: #e2f5ea;
+	--muted: #83a593;
+	--accent: #3ddc84;
+	--accent-bright: #00ff66;
+	--amber: #ffb703;
+	--mono: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+	--sans: 'Space Grotesk', 'Segoe UI', sans-serif;
+}
+
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body { margin: 0; background: var(--bg); color: var(--text); font-family: var(--sans); line-height: 1.6; -webkit-font-smoothing: antialiased; }
+body::before { content: ''; position: fixed; inset: 0; pointer-events: none; opacity: .18; background-image: linear-gradient(rgba(61,220,132,.06) 1px, transparent 1px), linear-gradient(90deg, rgba(61,220,132,.06) 1px, transparent 1px); background-size: 44px 44px; mask-image: linear-gradient(to bottom, black, transparent 75%); }
+a { color: var(--accent); text-decoration: none; }
+a:hover { color: var(--accent-bright); }
+button { font: inherit; }
