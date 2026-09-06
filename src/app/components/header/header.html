@@ -1,6 +1,8 @@
 <header class="site-header">
 	<nav class="wrap" aria-label="Navegación principal">
-		<a class="brand" href="#top" (click)="closeMenu()" aria-label="Leo Cruz, inicio"><span class="brand-mark">⌁</span><span>LEO CRUZ</span></a>
+		<a class="brand" href="#top" (click)="closeMenu()" aria-label="Leo Cruz, inicio">
+			<img src="https://codeleo.dev/landing/codeleo-logo.png" alt="Leo Cruz" height="32" />
+		</a>
 		<button class="nav-toggle" type="button" (click)="toggleMenu()" [attr.aria-expanded]="menuOpen()" aria-label="Abrir menú">menu</button>
 		<div class="nav-links" [class.open]="menuOpen()">
 			<a href="#projects" (click)="closeMenu()">proyectos</a><a href="#stack" (click)="closeMenu()">stack</a><a href="#supporters" (click)="closeMenu()">cafecito</a><a href="#about" (click)="closeMenu()">sobre mí</a><a href="#contact" (click)="closeMenu()">contacto</a>
